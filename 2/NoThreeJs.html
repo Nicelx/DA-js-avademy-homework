@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="1000"
+			>Этот элемент не поддерживается</canvas
+		>
+		<!-- colors
+			#412c01
+			#2faa20
+		-->
+		<script>
+			var canvas = document.getElementById("canvas");
+			if (canvas.getContext) {
+				var ctx = canvas.getContext("2d");
+			}
+
+			const stem = [
+				[450, 900],
+				[500, 200],
+				[555, 900]
+			];
+			const branch = [
+				[480, 600],
+				[280, 400],
+				[480, 560]
+			]
+			const branch2 = [
+				[515, 480],
+				[700, 280],
+				[515, 455]
+			]
+			const branch3 = [
+				[490, 350],
+				[350, 180],
+				[490, 335]
+			]
+		
+			const drawLeaf = (x,y,deg) => {
+				ctx.beginPath()
+				ctx.fillStyle = '#2faa20'
+				// ctx.translate(x,y);
+				// ctx.rotate(deg);
+				ctx.moveTo(300,300)
+				ctx.arcTo(200, 200,300, 200,100);
+				ctx.stroke();
+				// ctx.lineTo
+			}
+			drawLeaf()
+			const reset = (x, y) => {
+				ctx.stroke();
+				ctx.fill();
+				ctx.beginPath();
+				ctx.moveTo(x, y);
+			};
+		
+			function drawByPaths(arr, color) {
+				ctx.fillStyle = color;
+				ctx.beginPath();
+				ctx.moveTo(...arr[0]);
+
+				for (let i = 1; i < arr.length; i++) {
+					ctx.lineTo(...arr[i]);
+					if (arr.length - i === 1) {
+						reset();
+					}
+				}
+			}
+
+			drawByPaths(stem, "#412c01");
+			drawByPaths(branch, "#412c01");
+			drawByPaths(branch2, "#412c01");
+			drawByPaths(branch3, "#412c01");
+			
+		</script>
+	</body>
+</html>
