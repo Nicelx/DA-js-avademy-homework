@@ -10,10 +10,6 @@
 		<canvas id="canvas" width="800" height="1000"
 			>Этот элемент не поддерживается</canvas
 		>
-		<!-- colors
-			#412c01
-			#2faa20
-		-->
 		<script>
 			var canvas = document.getElementById("canvas");
 			if (canvas.getContext) {
@@ -54,11 +50,9 @@
 			}
 
 
-			const reset = (x, y) => {
+			const reset = () => {
 				ctx.stroke();
 				ctx.fill();
-				ctx.beginPath();
-				ctx.moveTo(x, y);
 			};
 
 
