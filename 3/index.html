@@ -13,16 +13,115 @@
 		<title>Google here</title>
 	</head>
 	<body>
-		<!-- <div id="hamburger">PRESS ME</div>
-		<div id="services_window">I'm Services Window</div> -->
-
 		<header>
 			<a href="#"><img src="./img/photo.jpg" alt="avatar" /></a>
-
-			<div class = 'hamburger'>
-				<label for=""> </label>
+			<div class="hamburger">
+				<label class="hamburger__label" for="dd">
+					<div class="hamburger__button"></div>
+					<input type="checkbox" class="hamburger__input" id="dd" />
+					<div class="hamburger__menu">
+						<div class="group">
+							<div class="group__item">
+								<span class="group__icon1"> </span>
+								<span>Translate</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon2"> </span>
+								<span>Drive</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon3"> </span>
+								<span>Search</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon4"> </span>
+								<span>Maps</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon5"> </span>
+								<span>YouTube</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon6"> </span>
+								<span>Play</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon7"> </span>
+								<span>Gmail</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon8"> </span>
+								<span>Calendar</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon9"> </span>
+								<span>Photos</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon10"> </span>
+								<span>News</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon11"> </span>
+								<span>Meet</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon12"> </span>
+								<span>Duo</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon13"> </span>
+								<span>Chrome</span>
+							</div>
+						</div>
+						<div class="group">
+							<div class="group__item">
+								<span class="group__icon14"> </span>
+								<span>Docs</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon15"> </span>
+								<span>Blogger</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon16"> </span>
+								<span>Contacts</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon17"> </span>
+								<span>Hangouts</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon18"> </span>
+								<span>Sheets</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon19"> </span>
+								<span>Slides</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon20"> </span>
+								<span>Books</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon21"> </span>
+								<span>Keep</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon22"> </span>
+								<span>Earth</span>
+							</div>
+							<div class="group__item">
+								<span class="group__icon23"> </span>
+								<span>Podcasts</span>
+							</div>
+						</div>
+						<button class="menu-button">
+							Другие приложения и продукты от Google
+						</button>
+					</div>
+				</label>
 			</div>
-			
 
 			<a href="#">Картинки</a>
 			<a href="#">Почта</a>
@@ -30,15 +129,38 @@
 
 		<main>
 			<img src="./img/logo.gif" alt="Google Logo" />
-			<input class="search" type="text" />
-			<div>
+			<div class="search__input">
+				<span class="search__search-icon">
+					<svg
+						focusable="false"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+					>
+						<path
+							d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+						></path>
+					</svg>
+				</span>
+				<input class="search" type="text" />
+				<span>
+					<img src="./img/voice_icon.svg" alt="search" />
+				</span>
+			</div>
+			<div class="search__buttons">
 				<button>Поиск в Google</button>
 				<button>Мне повезет!</button>
 			</div>
-		</main>
-		<footer>
-			<div>Россия</div>
 			<div>
+				<span class="search__services">
+					Сервисы Google доступны на разных языках:
+					<a href="">English</a></span
+				>
+			</div>
+		</main>
+
+		<footer>
+			<div><span>Россия</span></div>
+			<div class="footer__nav">
 				<div>
 					<a href="#">Всё о Google</a>
 					<a href="#">Реклама</a>
@@ -52,8 +174,5 @@
 				</div>
 			</div>
 		</footer>
-
-		<!-- <script src="libs/jquery/dist/jquery.min.js"></script>
-		<script src="js/common.js"></script> -->
 	</body>
 </html>
