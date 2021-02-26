@@ -352,6 +352,11 @@ footer span {
 	color: var(--primary);
 }
 
+
+
+/* 
+anything else 
+*/
 ::-webkit-scrollbar {
 	width: 8px;
 }
