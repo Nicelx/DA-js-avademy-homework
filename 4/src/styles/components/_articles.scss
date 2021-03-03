@@ -1,0 +1,27 @@
+.articles {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(100px, 1fr));
+	grid-column-gap: 20px;
+	padding-top: 40px;
+
+	&__header {
+		@include box(100%, auto);
+	}
+
+	&__item {
+		background-color: $white;
+	}
+	&__content {
+		padding: 20px;
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width : 920px) {
+	.articles {
+		display: none;
+	}
+}

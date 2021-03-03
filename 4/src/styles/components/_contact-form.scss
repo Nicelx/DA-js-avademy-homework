@@ -1,0 +1,55 @@
+.contact-form {
+	position: sticky;
+	top: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	@include box(250px, 150px, 5px);
+	background-color: $white;
+
+	&__label {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	&__input-wrapper {
+		width: 90%;
+		margin-top: 10px;
+		position: relative;
+	}
+	&__tel-mark {
+		@include absolute(3px, 2px);
+		color: $gray;
+	}
+	&__input {
+		
+		@include box(100%, 25px, 2px);
+		border: 1px solid rgba(0,0,0,0.2);
+		padding: 2px 35px 2px 35px;
+		transition: 0.3s ease-in-out;
+		text-align: center;
+
+		&:focus {
+			box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+		}
+
+		&:valid {
+			background-color: rgba($success-rgb, 0.2);
+		}
+		&:invalid:focus {
+			background-color: rgba($danger-rgb, 0.2);
+		}
+
+	}
+
+	&__button {
+		@include box(90%, 25px, 3px);
+		margin-top: 20px;
+		padding: 10px auto;
+		background-color: $primary;
+		color: $white;
+		border: none;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+	}
+}

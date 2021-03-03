@@ -1,0 +1,10 @@
+.aside {
+	padding: 20px;
+	position: relative;
+}
+
+@media (max-width: 1020px) {
+	.aside {
+		display: none;
+	}
+}

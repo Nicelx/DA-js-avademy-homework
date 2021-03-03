@@ -1,0 +1,18 @@
+.partners {
+	padding-top: 50px;
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	&__item {
+		@include box(100px,100px);
+		margin: 5px 2px;
+	}
+}
+
+@media (max-width: 920px) {
+	.partners {
+		width: 100%;
+	}
+}

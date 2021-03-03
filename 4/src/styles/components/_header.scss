@@ -1,0 +1,38 @@
+@use "../variables.scss";
+
+.header {
+  &__container {
+    @include absolute(20px,20px,20px);
+    // position: absolute;
+    // top: 20px;
+    // left: 20px;
+    // right: 20px;
+    background: $white;
+    height: 50px;
+  }
+
+  &__navigation {
+    list-style: none;
+    line-height: 50px;
+  }
+
+  &__navigation-item {
+    display: inline-block;
+    margin-left: 15px;
+    color: $gray;
+
+    & a {
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .header__navigation-item {
+    margin-left: 3px;
+    & a {
+      font-size: 12px;
+    }
+  }
+}

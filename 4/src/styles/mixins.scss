@@ -1,0 +1,21 @@
+@mixin box($w, $h, $br: null) {
+	width: $w;
+	height: $h;
+
+	border-radius: $br;
+}
+@mixin absolute($top, $left, $right: null, $bottom: null) {
+	position: absolute;
+	top: $top;
+	left: $top;
+	right: $right;
+	bottom: $bottom;
+}
+
+//  just curious. is it ok? =))
+// @mixin flex($direction:null, $just-content:null, $align-content:null) {
+// 	display: flex;
+// 	flex-direction: $direction;
+// 	justify-content: $just-content;
+// 	align-items: $align-content;
+// }
