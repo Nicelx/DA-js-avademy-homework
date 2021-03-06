@@ -1,0 +1,29 @@
+.header {
+	padding-top: 40px;
+	color: $white;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.navigation {
+	width: 494px;
+	display: flex;
+	justify-content: space-between;
+	&__link {
+		position: relative;
+		cursor: pointer;
+		&:hover:after, &:focus:after {
+			content: '';
+			top: 32px;
+			position: absolute;
+  			left: 50%;
+  			transform: translateX(-50%);
+			background-color: $white;
+			height: 1px;
+			animation: animated-border 0.4s forwards;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+@keyframes animated-border {
+	0% {
+		width: 40%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
