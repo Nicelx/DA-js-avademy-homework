@@ -1,8 +1,11 @@
-@import './reset.scss';
 @import './variables.scss';
+@import './reset.scss';
 @import './mixins.scss';
 @import './common.scss';
 @import './animations.scss';
+
+@import './components/logo';
+@import './components/button';
 
 @import './components/backgrounds';
 @import './components/header';

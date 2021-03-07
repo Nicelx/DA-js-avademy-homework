@@ -1,10 +1,31 @@
 .header {
 	padding-top: 40px;
 	color: $white;
+}
 
-	&__top {
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-main {
+	margin-top: 165px;
+	width: 567px;
+	height: 400px;
+
+	&__title {
+		font-family: $font-lato;
+		font-size: 56px;
+		font-weight: 900;
+		line-height: 66px;
+	}
+	&__paragraph {
+		color: $header-paragraph;
+		padding: 40px 0;
+	}
+	&__get-started {
 		display: flex;
-		justify-content: space-between;
 	}
 }
 
@@ -15,15 +36,41 @@
 	&__link {
 		position: relative;
 		cursor: pointer;
-		&:hover:after, &:focus:after {
-			content: '';
+		&:hover:after,
+		&:focus:after {
+			content: "";
 			top: 32px;
 			position: absolute;
-  			left: 50%;
-  			transform: translateX(-50%);
+			left: 50%;
+			transform: translateX(-50%);
 			background-color: $white;
 			height: 1px;
 			animation: animated-border 0.4s forwards;
 		}
+	}
+}
+.video {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 168px;
+	height: 61px;
+	
+	&__icon {
+		width: 61px;
+		height: 61px;
+		border-radius: 50%;
+		background-color: $white;
+		padding: 20px;
+		&__play {
+			width: 22px;
+			height: 22px;
+		}
+		&:focus {
+			box-shadow: 0 0 6px $white;
+		}
+	}
+	&__text {
+		font-weight: 500;
 	}
 }

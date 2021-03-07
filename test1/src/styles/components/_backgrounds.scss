@@ -1,8 +1,22 @@
 .bg-top {
-	height: 940px;
+	height:940px;
+	z-index: -1; 
+	overflow: hidden;
+	&:after {
+		content: '';
+		position: absolute;
+		transform: skew(3deg,-7deg);
+		margin-top: -125px;
+		left: 25px;
+		width: 1980px;
+		height: 100%;
+		border-radius: 0 0 0 80px;
+		background-color: $secondary;
+	}
 }
 
 .bg-top, .bg-bottom {
-	background-color: $secondary; 
+	position: absolute;
 	width: 100%;
 }
+

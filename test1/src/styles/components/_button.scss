@@ -1,0 +1,18 @@
+.button {
+	width: 148px;
+	color: $white;
+	background-color: $primary;
+	height: 52px;
+	border-radius: 28px;
+	&:focus {
+		box-shadow: 0 0 4px $white;
+	} 
+
+	&_get-started {
+		width: 187px;
+		height: 61px;
+		border-radius: 46px;
+		font-weight: 500;
+		margin-right: 25px;
+	}
+}
