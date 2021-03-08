@@ -1,0 +1,39 @@
+.features {
+	display: flex;
+	justify-content: space-between;
+}
+
+.feature {
+	width: 370px;
+	height: 515px;
+	padding: 60px 38px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__icon-bg {
+		width: 130px;
+		height: 130px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
+		margin-bottom: 35px;
+	}
+	&__icon-inner-bg {
+		width: 114px;
+		height: 114px;
+		border-radius: 50%;
+		background-color:rgba($primary-rgb, 0.1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		@include font-lato-semibold;
+	}
+	&__content {
+		margin: 30px 0;
+		color: $gray;
+	}
+}
