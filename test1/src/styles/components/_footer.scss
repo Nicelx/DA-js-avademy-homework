@@ -1,0 +1,13 @@
+.footer {
+	color: $white;
+	display: flex;
+	&__item {
+		&:first-child {
+			width: 400px;
+		}
+		&:nth-child(2), &:nth-child(3) {
+			width: 200px;
+		}
+		
+	}
+}

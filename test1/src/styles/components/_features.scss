@@ -1,6 +1,9 @@
 .features {
 	display: flex;
 	justify-content: space-between;
+	&_mb {
+		margin-bottom: 174px;
+	}
 }
 
 .feature {
@@ -10,6 +13,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	
+	&:hover {
+		box-shadow: 0px 10px 30px rgba($primary-rgb, 0.2);
+	}
+	
 	&__icon-bg {
 		width: 130px;
 		height: 130px;
@@ -34,6 +44,5 @@
 	}
 	&__content {
 		margin: 30px 0;
-		color: $gray;
 	}
 }

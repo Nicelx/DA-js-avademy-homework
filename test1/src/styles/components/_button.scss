@@ -4,9 +4,15 @@
 	background-color: $primary;
 	height: 52px;
 	border-radius: 28px;
-	&:focus {
+	transition: 0.4s transform ease-in;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:focus,
+	&:hover {
 		box-shadow: 0 0 4px $white;
-	} 
+		transform: scale(1.02);
+	}
 
 	&_get-started {
 		width: 187px;
@@ -14,5 +20,38 @@
 		border-radius: 46px;
 		font-weight: 500;
 		margin-right: 25px;
+	}
+	&_features {
+		width: 163px;
+		height: 50px;
+		border-radius: 25px;
+		font-weight: 500;
+		background-color: $white;
+		color: $primary;
+		border: 2px solid $primary;
+
+		&:hover,
+		&:focus {
+			background-color: $primary;
+			color: $white;
+			border: none;
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+		}
+	}
+
+	&_about {
+		width: 182px;
+		font-weight: 500;
+		border-radius: 28px;
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+		}
+	}
+	&_subscribe {
+		width: 81px;
+		height: 76px;
+		border-radius: 0px 5px 5px 0px;
 	}
 }
