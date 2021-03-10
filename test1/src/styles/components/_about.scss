@@ -6,6 +6,7 @@
 	}
 
 	&__avatar {
+		object-fit: contain;
 		width: 470px;
 		max-height: 590px;
 	}
@@ -52,6 +53,35 @@
 		&-content {
 			color: $gray-4;
 			margin-left: 23px;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	.about {
+		justify-content: space-evenly;
+		&__title {
+			font-size: 40px;
+		}
+		&__avatar {
+			width: 250px;
+			max-height: 400px;
+			margin-right: 10px;
+			align-self: flex-start;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-md) {
+	.about {
+		flex-direction: column;
+		&__avatar {
+			width: 350px;
+			margin: 20px auto;
+		}
+		&__block {
+			width: 500px;
+			margin-left: 30px;			
 		}
 	}
 }

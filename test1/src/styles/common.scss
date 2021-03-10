@@ -20,7 +20,15 @@ a:visited {
 button {
 	cursor: pointer;
 }
-
+strong {
+	font-weight: 500;
+}
 .container {
 	width: 1170px;
+}
+
+@media (max-width: $breakpoint-lg) {
+	.container {
+		width: 96%;
+	}
 }

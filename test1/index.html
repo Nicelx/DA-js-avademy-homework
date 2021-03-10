@@ -15,7 +15,7 @@
 	<body>
 		<div class="bg-top"></div>
 		<header class="header container">
-			<div class="header-top">
+			<div class="header__top">
 				<div class="logo">
 					<img
 						class="logo__img"
@@ -32,18 +32,19 @@
 					<a class="navigation__link" href="#">Blog</a>
 					<a class="navigation__link" href="#">Contact</a>
 				</nav>
+				<div class = 'break'></div>
 				<button class="button">Free Quote</button>
 			</div>
 
-			<section class="header-main">
-				<h1 class="header-main__title">
+			<section class="header__main">
+				<h1 class="header__title">
 					Data Science and Analytics with Survey Reports
 				</h1>
-				<p class="header-main__paragraph">
+				<p class="header__paragraph">
 					Aenean sed nibh a magna posuere tempor. Nunc faucibus
 					pellentesque nunc in aliquet Donec congue.
 				</p>
-				<div class="header-main__get-started">
+				<div class="header__get-started">
 					<button class="button button_get-started">
 						Get Started
 					</button>
@@ -197,7 +198,7 @@
 		<footer class="footer container">
 			<section class="footer__top">
 				<section class="footer__item">
-					<div class="logo">
+					<div class="logo logo_footer">
 						<img
 							class="logo__img"
 							src="./src/img/logo.svg"
@@ -205,11 +206,48 @@
 						/>
 						<span class="logo__text">Dace</span>
 					</div>
+					<p class = 'footer__paragraph'>There are many variations of passages of Lorem Ipsum available, but the majorit have suffered alteration.</p>
+					<nav class = 'social'>
+						<a class = 'social__background' href = '#'><img class = 'social__img'src="./src/img/icons/facebook.svg" alt="facebook"></a>
+						<a class = 'social__background' href = '#'><img class = 'social__img'src="./src/img/icons/twitter.svg" alt="twitter"></a>
+						<a class = 'social__background' href = '#'><img class = 'social__img'src="./src/img/icons/instagram.svg" alt="instagram"></a>
+					</nav>
 				</section>
-				<section class="footer__item"></section>
-				<section class="footer__item"></section>
-				<section class="footer__item"></section>
+				<section class="footer__item">
+					<h3 class = 'footer__title'>Quick Links</h3>
+					<nav class = 'footer__nav-list'>
+						<a class = 'footer__list-item' href="#">About</a>
+						<a class = 'footer__list-item' href="#">Services</a>
+						<a class = 'footer__list-item' href="#">Privacy</a>
+						<a class = 'footer__list-item' href="#">Career</a>
+						<a class = 'footer__list-item' href="#">Blog</a>
+					</nav>
+				</section>
+				<section class="footer__item">
+					<h3 class = 'footer__title'>About</h3>
+					<nav class = 'footer__nav-list'>
+						<a class = 'footer__list-item' href="#">About</a>
+						<a class = 'footer__list-item' href="#">Services</a>
+						<a class = 'footer__list-item' href="#">Privacy</a>
+						<a class = 'footer__list-item' href="#">Career</a>
+						<a class = 'footer__list-item' href="#">Blog</a>
+					</nav>
+				</section>
+				<section class="footer__item">
+					<h3 class = 'footer__title'>Contact Us</h3>
+					<ul>
+						<li class = 'footer__list-item'><strong>Address:</strong>  2750 Quadra Street Victoria, Canada</li>
+						<li class = 'footer__list-item'><strong>Call:</strong> +1 898 445 8978</li>
+						<li class = 'footer__list-item'><strong>Email:</strong> info@dace.com</li>
+						<li class = 'footer__list-item'><strong>Fax:</strong> +44 785 4578964</li>
+					</ul>
+				</section>
 			</section>
+
+			<aside class = 'footer__bottom'>
+				<p class = 'footer__copyright'>© 2020 Dace. All Right Reserved</p>
+				<p class = 'footer__copyright'>Privacy & Policy</p>
+			</aside>
 		</footer>
 		<div class="bg-bottom"></div>
 	</body>

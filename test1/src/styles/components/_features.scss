@@ -46,3 +46,16 @@
 		margin: 30px 0;
 	}
 }
+
+@media (max-width: $breakpoint-lg) {
+	.features {
+		flex-wrap: wrap;
+		justify-content: center;
+		&_mb {
+			margin-bottom: 80px;
+		}
+	}
+	.feature {
+		margin: 10px;
+	}
+}
