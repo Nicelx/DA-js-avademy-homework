@@ -4,22 +4,35 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Data Science and Analytics to the rescue. Modern solutions for optimization and blah blah blah..."
+		/>
+		<meta
+			name="keywords"
+			content="data Science, analytics, artificial-intelligence, big-data"
+		/>
 		<title>Dace</title>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="shortcut icon"
+			href="./src/img/icons/logo.svg"
+			type="image/x-icon"
+		/>
 		<link rel="stylesheet" href="./src/styles/main.scss" />
 	</head>
 	<body>
-		<div class="bg-top"></div>
+		<div class="bg-top"><img src="./src/img/web.svg" alt=""></div>
 		<header class="header container">
 			<div class="header__top">
 				<div class="logo">
 					<img
 						class="logo__img"
-						src="./src/img/logo.svg"
+						src="./src/img/icons/logo.svg"
 						alt="Dace Logo"
 					/>
 					<span class="logo__text">Dace</span>
@@ -32,8 +45,39 @@
 					<a class="navigation__link" href="#">Blog</a>
 					<a class="navigation__link" href="#">Contact</a>
 				</nav>
-				<div class = 'break'></div>
-				<button class="button">Free Quote</button>
+				<div class="drawer">
+					<label for="burger">
+						<div class="drawer__button">
+							<img
+								class="drawer__icon"
+								src="./src/img/icons/menu.svg"
+								alt="menu"
+							/>
+						</div>
+					</label>
+					<input
+						class="drawer__checkbox"
+						type="checkbox"
+						id="burger"
+					/>
+
+					<div class="drawer__block">
+						<label for="burger"><img class = 'drawer__icon drawer__icon_close'src="./src/img/icons/close.svg" alt="close icon"></label>
+						<nav class="drawer__navigation">
+							<a class="drawer__link" href="#">Home</a>
+							<a class="drawer__link" href="#">About</a>
+							<a class="drawer__link" href="#">Services</a>
+							<a class="drawer__link" href="#">Pages</a>
+							<a class="drawer__link" href="#">Blog</a>
+							<a class="drawer__link" href="#">Contact</a>
+						</nav>
+					</div>
+					<label class="drawer__backdrop" for="burger"></label>
+				</div>
+
+				<div class = 'header__free-quote'>
+					<button class="button">Free Quote</button>
+				</div>
 			</div>
 
 			<section class="header__main">
@@ -52,23 +96,23 @@
 						<button class="video__icon">
 							<img
 								class="video__icon__play"
-								src="./src/img/play.svg"
-								alt=""
+								src="./src/img/icons/play.svg"
+								alt="video icon"
 							/>
 						</button>
-						<span class="video__text">Watch video</span>
+						<p class="video__text">Watch video</p>
 					</a>
 				</div>
 			</section>
 		</header>
 
-		<main class="main-content main-content_mt main-content_mb container">
+		<main class="main-content main-content_mb container">
 			<section class="features features_mb">
 				<section class="feature">
 					<div class="feature__icon-bg">
 						<div class="feature__icon-inner-bg">
 							<img
-								src="./src/img/data-manegment.svg"
+								src="./src/img/icons/data-manegment.svg"
 								alt="data manegment icon"
 							/>
 						</div>
@@ -86,7 +130,10 @@
 				<section class="feature">
 					<div class="feature__icon-bg">
 						<div class="feature__icon-inner-bg">
-							<img src="./src/img/idea.svg" alt="idea icon" />
+							<img
+								src="./src/img/icons/idea.svg"
+								alt="idea icon"
+							/>
 						</div>
 					</div>
 
@@ -103,7 +150,7 @@
 					<div class="feature__icon-bg">
 						<div class="feature__icon-inner-bg">
 							<img
-								src="./src/img/artificial-intelligence.svg"
+								src="./src/img/icons/artificial-intelligence.svg"
 								alt="ai icon"
 							/>
 						</div>
@@ -141,21 +188,30 @@
 					</p>
 					<ul class="about__bullets">
 						<li class="about__bullet">
-							<img src="./src/img/circle-check.svg" alt="" />
+							<img
+								src="./src/img/icons/circle-check.svg"
+								alt=""
+							/>
 							<p class="about__bullet-content">
 								Bringing power from data science & artificial
 								intelligence
 							</p>
 						</li>
 						<li class="about__bullet">
-							<img src="./src/img/circle-check.svg" alt="" />
+							<img
+								src="./src/img/icons/circle-check.svg"
+								alt=""
+							/>
 							<p class="about__bullet-content">
 								Data science and artificial intelligence bring
 								powers for good business
 							</p>
 						</li>
 						<li class="about__bullet">
-							<img src="./src/img/circle-check.svg" alt="" />
+							<img
+								src="./src/img/icons/circle-check.svg"
+								alt=""
+							/>
 							<p class="about__bullet-content">
 								Next generation trends will happens from
 								analytics
@@ -185,7 +241,7 @@
 						/>
 						<button class="button button_subscribe">
 							<img
-								src="./src/img/submit-subscription.svg"
+								src="./src/img/icons/submit-subscription.svg"
 								alt=""
 							/>
 						</button>
@@ -194,60 +250,86 @@
 			</aside>
 		</main>
 
-		
 		<footer class="footer container">
 			<section class="footer__top">
 				<section class="footer__item">
 					<div class="logo logo_footer">
 						<img
 							class="logo__img"
-							src="./src/img/logo.svg"
+							src="./src/img/icons/logo.svg"
 							alt="Dace Logo"
 						/>
 						<span class="logo__text">Dace</span>
 					</div>
-					<p class = 'footer__paragraph'>There are many variations of passages of Lorem Ipsum available, but the majorit have suffered alteration.</p>
-					<nav class = 'social'>
-						<a class = 'social__background' href = '#'><img class = 'social__img'src="./src/img/icons/facebook.svg" alt="facebook"></a>
-						<a class = 'social__background' href = '#'><img class = 'social__img'src="./src/img/icons/twitter.svg" alt="twitter"></a>
-						<a class = 'social__background' href = '#'><img class = 'social__img'src="./src/img/icons/instagram.svg" alt="instagram"></a>
+					<p class="footer__paragraph">
+						There are many variations of passages of Lorem Ipsum
+						available, but the majorit have suffered alteration.
+					</p>
+					<nav class="social">
+						<a class="social__background" href="#"
+							><img
+								class="social__img"
+								src="./src/img/icons/facebook.svg"
+								alt="facebook"
+						/></a>
+						<a class="social__background" href="#"
+							><img
+								class="social__img"
+								src="./src/img/icons/twitter.svg"
+								alt="twitter"
+						/></a>
+						<a class="social__background" href="#"
+							><img
+								class="social__img"
+								src="./src/img/icons/instagram.svg"
+								alt="instagram"
+						/></a>
 					</nav>
 				</section>
 				<section class="footer__item">
-					<h3 class = 'footer__title'>Quick Links</h3>
-					<nav class = 'footer__nav-list'>
-						<a class = 'footer__list-item' href="#">About</a>
-						<a class = 'footer__list-item' href="#">Services</a>
-						<a class = 'footer__list-item' href="#">Privacy</a>
-						<a class = 'footer__list-item' href="#">Career</a>
-						<a class = 'footer__list-item' href="#">Blog</a>
+					<h3 class="footer__title">Quick Links</h3>
+					<nav class="footer__nav-list">
+						<a class="footer__list-item" href="#">About</a>
+						<a class="footer__list-item" href="#">Services</a>
+						<a class="footer__list-item" href="#">Privacy</a>
+						<a class="footer__list-item" href="#">Career</a>
+						<a class="footer__list-item" href="#">Blog</a>
 					</nav>
 				</section>
 				<section class="footer__item">
-					<h3 class = 'footer__title'>About</h3>
-					<nav class = 'footer__nav-list'>
-						<a class = 'footer__list-item' href="#">About</a>
-						<a class = 'footer__list-item' href="#">Services</a>
-						<a class = 'footer__list-item' href="#">Privacy</a>
-						<a class = 'footer__list-item' href="#">Career</a>
-						<a class = 'footer__list-item' href="#">Blog</a>
+					<h3 class="footer__title">About</h3>
+					<nav class="footer__nav-list">
+						<a class="footer__list-item" href="#">About</a>
+						<a class="footer__list-item" href="#">Services</a>
+						<a class="footer__list-item" href="#">Privacy</a>
+						<a class="footer__list-item" href="#">Career</a>
+						<a class="footer__list-item" href="#">Blog</a>
 					</nav>
 				</section>
 				<section class="footer__item">
-					<h3 class = 'footer__title'>Contact Us</h3>
+					<h3 class="footer__title">Contact Us</h3>
 					<ul>
-						<li class = 'footer__list-item'><strong>Address:</strong>  2750 Quadra Street Victoria, Canada</li>
-						<li class = 'footer__list-item'><strong>Call:</strong> +1 898 445 8978</li>
-						<li class = 'footer__list-item'><strong>Email:</strong> info@dace.com</li>
-						<li class = 'footer__list-item'><strong>Fax:</strong> +44 785 4578964</li>
+						<li class="footer__list-item">
+							<strong>Address:</strong> 2750 Quadra Street
+							Victoria, Canada
+						</li>
+						<li class="footer__list-item">
+							<strong>Call:</strong> +1 898 445 8978
+						</li>
+						<li class="footer__list-item">
+							<strong>Email:</strong> info@dace.com
+						</li>
+						<li class="footer__list-item">
+							<strong>Fax:</strong> +44 785 4578964
+						</li>
 					</ul>
 				</section>
 			</section>
 
-			<aside class = 'footer__bottom'>
-				<p class = 'footer__copyright'>© 2020 Dace. All Right Reserved</p>
-				<p class = 'footer__copyright'>Privacy & Policy</p>
-			</aside>
+			<div class="footer__bottom">
+				<p class="footer__copyright">© 2020 Dace. All Right Reserved</p>
+				<p class="footer__copyright">Privacy & Policy</p>
+			</div>
 		</footer>
 		<div class="bg-bottom"></div>
 	</body>

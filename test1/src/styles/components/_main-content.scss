@@ -2,7 +2,8 @@
 	display: flex;
 	flex-direction: column;
 
-	h2,h3 {
+	h2,
+	h3 {
 		font-family: $font-lato;
 		color: $dark;
 	}
@@ -10,8 +11,13 @@
 	p {
 		color: $gray;
 	}
-
 }
 .main-content_mb {
 	margin-bottom: 130px;
+}
+
+@media (max-width: $breakpoint-md) {
+	.main-content_mb {
+		margin-bottom: 70px;
+	}
 }

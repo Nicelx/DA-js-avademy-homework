@@ -51,7 +51,36 @@
 	}
 	&_subscribe {
 		width: 81px;
-		height: 76px;
+		height: 100%;
 		border-radius: 0px 5px 5px 0px;
+		&:hover {
+			transform: none;
+			box-shadow: none;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.button {
+		&_subscribe {
+			width: 45px;
+		}
+		&_get-started {
+			margin-right: 5px;
+		}
+	}
+}
+@media (max-width: $breakpoint-xs) {
+	.button {
+		&_subscribe {
+			width: 32px;
+			img {
+				width: 20px;
+			}
+		}
+		&_get-started {
+			margin: 0;
+			width: 150px;
+		}
 	}
 }

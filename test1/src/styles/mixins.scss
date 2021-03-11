@@ -1,5 +1,22 @@
 @mixin font-lato-semibold() {
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 600;
 	font-size: 24px;
+}
+
+@mixin animated-underline($color, $duration) {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $color;
+	height: 1px;
+	animation: animated-border $duration forwards;
+}
+
+@mixin centering() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

@@ -15,29 +15,28 @@
 	align-items: center;
 	box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
-	
+
 	&:hover {
 		box-shadow: 0px 10px 30px rgba($primary-rgb, 0.2);
 	}
-	
+
 	&__icon-bg {
+		position: relative;
 		width: 130px;
 		height: 130px;
 		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
 		margin-bottom: 35px;
 	}
 	&__icon-inner-bg {
+		@include centering();
 		width: 114px;
 		height: 114px;
 		border-radius: 50%;
-		background-color:rgba($primary-rgb, 0.1);
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		background-color: rgba($primary-rgb, 0.1);
+		img {
+			@include centering();
+		}
 	}
 	&__title {
 		@include font-lato-semibold;
@@ -57,5 +56,28 @@
 	}
 	.feature {
 		margin: 10px;
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.feature {
+		padding: 20px;
+	}
+}
+@media (max-width: $breakpoint-xs) {
+	.feature {
+		&__icon-bg {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 10px;
+		}
+		&__icon-inner-bg {
+			width: 95px;
+			height: 95px;
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
 	}
 }

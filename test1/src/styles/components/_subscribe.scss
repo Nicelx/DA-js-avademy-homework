@@ -17,6 +17,7 @@
 
 	&__left {
 		width: 401px;
+		margin-right: 10px;
 	}
 	&__title {
 		font-weight: 700;
@@ -28,11 +29,11 @@
 
 	&__form {
 		display: flex;
-		width: 418px;
+		height: 76px;
 	}
 	&__input {
 		width: 337px;
-		height: 76px;
+		height: 100%;
 		padding: 23px 28px;
 		box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.04);
 		border-radius: 5px 0px 0px 5px;
@@ -49,6 +50,71 @@
 
 		&:invalid:focus {
 			background-color: rgba($danger-rgb, 0.3);
+		}
+	}
+}
+
+@media (max-width: $breakpoint-lg) {
+	.subscribe {
+		&__paper {
+			justify-content: space-around;
+			padding: 74px 35px;
+		}
+		&__title {
+			font-size: 30px;
+			line-height: 45px;
+		}
+		&__input {
+			width: 280px;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-md) {
+	.subscribe {
+		&__paper {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 20px 0 20px 15vw;
+		}
+		&__form {
+			height: 60px;
+		}
+	}
+}
+@media (max-width: $breakpoint-sm) {
+	.subscribe {
+		&__paper {
+			padding-left: 15px;
+		}
+		&__title {
+			font-size: 20px;
+			line-height: 35px;
+			margin-bottom: 15px;
+		}
+		&__left {
+			width: 100%;
+		}
+		&__form {
+			height: 45px;
+		}
+		&__input {
+			padding: 4px;
+			width: 200px;
+		}
+	}
+}
+@media (max-width: $breakpoint-xs) {
+	.subscribe {
+		padding: 0;
+		&__title {
+			line-height: 30px;
+		}
+		&__paper {
+			height: auto;
+		}
+		&__input {
+			width: 60vw;
 		}
 	}
 }

@@ -1,38 +1,76 @@
-.bg-top {
-	height:940px;
-	z-index: -1; 
+.bg-top, .bg-bottom {
+	position: absolute;
+	width: 100%;
+	z-index: -1;
 	overflow: hidden;
-	&:after {
+	&::after {
 		content: '';
 		position: absolute;
+		width: 1980px;
+		height: 100%;
+		background-color: $secondary;
+	}
+}
+
+
+.bg-top {
+	height:940px;
+	&::after {
 		transform: skew(3deg,-7deg);
 		margin-top: -125px;
 		left: 25px;
-		width: 1980px;
-		height: 100%;
-		border-radius: 0 0 0 80px;
-		background-color: $secondary;
+		border-radius: 0 0 0 133px;
+	}
+	img {
+		position: absolute;
+		z-index: 1;
+		top:67px;
+		left: 4px;
 	}
 }
 
 .bg-bottom {
 	bottom: 0;
 	height:830px;
-	z-index: -1; 
-	overflow: hidden;
-	&:after {
-		content: '';
-		position: absolute;
-		// transform: skew(3deg,-7deg);
-		// left: 25px;
+	&::after {	
+		transform: skew(3deg,-7deg);
+		right: 20px;
+		margin-top: 122px;
 		width: 1980px;
 		height: 100%;
-		// border-radius: 0 0 0 80px;
-		background-color: $secondary;
+		border-radius: 0 133px 0 0;
 	}
 }
-.bg-top, .bg-bottom {
-	position: absolute;
-	width: 100%;
-}
 
+
+
+
+@media (min-width: $breakpoint-xl) {
+	.bg-top,.bg-bottom {
+		&::after {
+			width: 3000px;
+		}
+	}
+	.bg-top {
+		&::after {
+			margin-top: -184px;
+		}
+	}
+	.bg-bottom {
+		&::after {
+			margin-top: 184px;
+		}
+	}
+}
+@media (max-width: $breakpoint-sm) {
+	.bg-top{
+		&::after {
+			margin-top: -360px;
+			left: 13px;
+		}
+		img {
+			top: -169px;
+			left: -10px;
+		}
+	}
+}

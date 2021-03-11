@@ -1,7 +1,7 @@
 .footer {
 	color: $white;
 	a:hover,a:focus {
-		text-shadow: 0 0 3px $white;
+		text-shadow: 0 0 5px $white;
 	}
 	&__top {
 		display: flex;
@@ -57,9 +57,72 @@
 		margin-right: 15px;
 	}
 	&__img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include centering();
+	}
+}
+@media (max-width : $breakpoint-md) {
+	.footer {
+		line-height: 20px;
+		&__top {
+			flex-wrap: wrap;
+			justify-content:flex-start;
+			padding: 0 100px;
+			margin-bottom: 40px;
+		}
+		&__item {
+			margin: 15px;
+			&:first-child,&:last-child {
+				width:90%;
+			}
+			&:nth-child(2), &:nth-child(3) {
+				width: 140px;
+			}
+		}
+		&__title {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+		&__paragraph {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		&__list-item {
+			line-height: 30px;
+		}
+	}
+	.social {
+		margin: 10px auto;
+	}
+}
+
+@media (max-width: $breakpoint-sm) {
+	.footer {
+		&__top {
+			padding: 0 10px;
+		}
+		&__item {
+			&:nth-child(2), &:nth-child(3) {
+				width: 100px;
+			}
+		}
+	}
+}
+@media (max-width: $breakpoint-xs) {
+	.footer {
+		&__top {
+			padding: 0;
+		}
+		&__item {
+			margin: 3px;
+			&:nth-child(2), &:nth-child(3) {
+				width: auto;
+			}
+		}
+	}
+	.social {
+		&__background {
+			width: 30px;
+			height: 30px;
+		}
 	}
 }

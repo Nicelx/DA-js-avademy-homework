@@ -5,10 +5,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 165px;
 	}
 
 	&__main {
-		margin-top: 165px;
 		width: 567px;
 		height: 400px;
 		margin-bottom: 381px;
@@ -29,22 +29,15 @@
 }
 
 .navigation {
-	width: 494px;
 	display: flex;
 	justify-content: space-between;
-	margin: 0 30px;
+	width: 494px;
 	&__link {
 		position: relative;
-		&:hover:after,
-		&:focus:after {
-			content: "";
+		&:hover::after,
+		&:focus::after {
 			top: 32px;
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			background-color: $white;
-			height: 1px;
-			animation: animated-border 0.4s forwards;
+			@include animated-underline($white, 0.4s);
 		}
 	}
 }
@@ -60,12 +53,13 @@
 		height: 61px;
 		border-radius: 50%;
 		background-color: $white;
-		padding: 20px;
+		position: relative;
 		&__play {
 			width: 22px;
 			height: 22px;
+			@include centering();
 		}
-		&:focus {
+		&:focus, &:hover {
 			box-shadow: 0 0 6px $white;
 		}
 	}
@@ -92,16 +86,59 @@
 	.header {
 		&__top {
 			.button {
-				margin: 30px auto 0 250px;
-				width: 168px;
+				margin: 30px auto 0;
 			}
 			.navigation {
-				width: 400px;
-				margin: 0 10px;
+				flex: 1 370px;
+				margin: 0 35px;
 			}
 		}
+		&__free-quote {
+			width: 100%;
+		}
+
 		&__main {
 			margin-bottom: 200px;
 		}
 }
+}
+
+@media (max-width: $breakpoint-sm) {
+	.header {
+		&__top {
+			margin-bottom: 25px;
+		}
+		&__main {
+			width: 90%;
+			margin-bottom: 100px;
+			padding-left: 30px;
+		}
+		&__title {
+			font-size: 30px;
+			line-height: 35px;
+		}
+		&__paragraph {
+			padding: 30px 0;
+		}
+	}
+	.navigation {
+		display: none;
+	}
+}
+@media (max-width: $breakpoint-xs) {
+	.header {
+		&__get-started {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__title {
+			font-size: 24px;
+		}
+		&__paragraph {
+			padding: 10px 0;
+		}
+	}
+	.video {
+		padding-top: 5px;
+	}
 }
