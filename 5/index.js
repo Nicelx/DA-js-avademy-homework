@@ -64,10 +64,11 @@ const simpleValidation = (data) => {
 		if (
 			typeof movie != "string" ||
 			typeof genre != "string" ||
+			typeof price != 'number' ||
 			movie == "" ||
 			genre == ""
 		) {
-			console.log("movie and genre are required");
+			console.log("movie properties invalid");
 			return false;
 		}
 		if (price < 0 || price > 9999) {

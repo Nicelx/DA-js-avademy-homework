@@ -17,7 +17,7 @@
 		display: none;
 		animation: drawer .6s ease-in;
 		padding: 40px 5px 0 10px;
-		z-index: 1;
+		z-index: 2;
 		box-shadow: 2px 0 3px rgba(0,0,0,0.4);
 	}
 	&__navigation {
@@ -45,6 +45,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0,0,0,0.4);
+		z-index: 1;
 	}
 	&__checkbox:checked + &__block {
 		display: block;
