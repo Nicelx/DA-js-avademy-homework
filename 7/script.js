@@ -1,29 +1,40 @@
+const {formatFullName} = Utils
+
+
 class Employee {
-	constructor(name, surname, rate) {
-		this.name= name;
-		this.surname = surname;
-		this.rate = rate;
-	}
-}
-
-const newEmpl = new Employee('John', 'Doe', 12);
-console.log(newEmpl);
-class Developer extends Employee {
-	constructor(name, surname, rate, position) {
-		super(name, surname, rate)
-	}
-}
-cons dev2 = new Developer('adsf', 'aa', 24);
-class Tester  extends Employee{
-
-}
-class Project {
-	constructor(name, budget) {
+	constructor(name, surname) {
 		this.name = name;
-		this.budget = budget;
+		this.surname = surname;
 	}
-	
+	_work = 0;
+
 }
 
-const proj = new Project('my project', 12000);
-console.log(proj);
+class Developer extends Employee {
+	makeIt() {
+		this._work += Math.random().toFixed(2);
+	}
+}
+class Tester extends Employee {
+	testIt()
+}
+
+class Project {
+	_developers = [];
+	_testers = [];
+
+	addDevelopers(dev) {
+		this._developers.push(formatFullName(dev));
+	}
+	get developers() {
+		return this._developers;
+	}
+	set developers() {
+		return 
+	}
+}
+
+const x = new Project();
+x.addDevelopers("hey sdf");
+console.log(x);
+console.log(y);
