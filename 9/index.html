@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+	<body id = 'myApp'>
+		<section class = 'controls'>
+			<h2 class = 'controls__title'>add your link</h2>
+			<input required class = 'controls__input' id = '' type="link">
+			<button class = 'controls__button'>add link</button>
+		</section>
+		
+		<section class = 'links'>
+			<h2 class = 'links__title'>Link list</h2>
+			<ul class = 'links__list'>
+				<li class = 'links__item'>
+					<a href="#">default link</a>
+					<button class = 'links__remove'>remove</button>
+				</li>
+			</ul>
+		</section>
+
+		<section class = 'track-info'>
+			<h3>tracking info</h3>
+			<button id = 'track-info__toggler'>show info</button>
+			<ul class = 'track-info__list'>
+				<li class = 'track-info__item'>initial</li>
+			</ul>
+		</section>
+
+		<!-- Create a div where the graph will take place -->
+		<div id="my_dataviz"></div>
+		<script src="https://d3js.org/d3.v4.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script src="./chart.js"></script>
+		<script src = './index.js'></script>
+	</body>
+</html>
