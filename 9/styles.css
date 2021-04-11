@@ -1,3 +1,81 @@
+:root {
+	--pink: #fc5185;
+	--blue: #3fc1c9;
+	--dark: #364f6b;
+	--gray-start: #D6D6D6;
+}
+
+body {
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+		sans-serif;
+	background: linear-gradient(-45deg, #364f6b 0.03%, #6b5072 42.25%, #fc5185 97.82%),
+		linear-gradient(0deg, #ffffff, #ffffff) no-repeat;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--dark)
+}
+
+.controls, .links, .track-info {
+	background-color: white;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+}
+a {
+	color: var(--blue)
+}
+button {
+	border: none;
+	background-color: var(--pink);
+	color: white;
+	width: 150px;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 1.25rem;
+	margin: 10px;
+}
+
+.links, .controls {
+	min-width: 400px;
+}
+
+table {
+	margin: 10px auto;
+	border-collapse: collapse;
+	overflow-y: scroll;
+}
+thead {
+	text-align: center;
+	font-weight: 900;
+	border: 1px solid gray;
+}
+td {
+	padding: 10px;
+	border: 1px solid gray;
+}
 li {
 	list-style-type: none;
+}
+.links__item {
+	max-width: 900px;
+	display: flex;
+	justify-content: space-between;
+}
+.track-info {
+	min-width: 600px;
+}
+
+.track-info__table--hidden{
+	display: none;
+}
+
+
+.track__header {
+	display: flex;
+	justify-content: space-between;
+}
+.track__img {
+	width: 150px;
 }
