@@ -78,9 +78,17 @@ class Tracker {
 
 		this.isTrackButtons = isTrackButtons;
 		this.isTrackLinks = isTrackLinks;
+		this._createTagArrayFromConfig();
 	}
 
 	_trackInfos = [];
+	_tags = []
+
+	_createTagArrayFromConfig = () => {
+		const {isTrackButtons, isTrackLinks, _tags} = this
+		if (isTrackButtons) _tags.push("button");
+		if (isTrackLinks) _tags.push("a");
+	}
 
 	_setTracked = (item) => item.setAttribute(TRACKED_ATTR, true);
 	_addTrackedToElements = (elements) => elements.map(this._setTracked);
@@ -117,14 +125,10 @@ class Tracker {
 	};
 
 	_trackListener = (e) => {
-		const { isTrackButtons, isTrackLinks } = this;
+		const { _tags } = this;
 		const { localName, dataset } = e.target;
-		const tags = [];
 
-		if (isTrackButtons) tags.push("button");
-		if (isTrackLinks) tags.push("a");
-
-		if (tags.includes(localName) || dataset.tracked) {
+		if (_tags.includes(localName) || dataset.tracked) {
 			this._addTrackInfo(e);
 			return;
 		}
@@ -173,7 +177,7 @@ class InfoRepresentation {
 	_render = (tableString) => (this.listEl.innerHTML = tableString);
 	
 	_onTrackInfosHanlder = () => this._render(this._createTableString());
-	
+
 	addInfoReprListener = () => {
 		app.addEventListener(ON_TRACK_INFO, this._onTrackInfosHanlder);
 		toggler.addEventListener('click', this._toggleInfo)
